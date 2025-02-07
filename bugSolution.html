@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    const div = document.getElementById('myDiv');
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This text replaces the div content.';
+    div.appendChild(newParagraph);
+
+    const newSpan = document.createElement('span');
+    newSpan.textContent = 'This text appends correctly.';
+    div.appendChild(newSpan);
+  </script>
+</body>
+</html>
