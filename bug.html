@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML on an element with an existing child node.
+    // This could lead to unexpected behavior, but might not always throw an error.
+    const div = document.getElementById('myDiv');
+    div.innerHTML = '<p>This text replaces the div content.</p>';
+    div.innerHTML += '<span>This text appends, but might not render as expected.</span>'; 
+  </script>
+</body>
+</html>
